@@ -69,3 +69,6 @@ else:
                 print("及格")
             else:
                 print("不及格")
+
+n=int(input())
+print(n*(n+1)//2)
