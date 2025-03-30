@@ -72,3 +72,32 @@ else:
 
 n=int(input())
 print(n*(n+1)//2)
+
+for i in range(10):
+    print(i)
+
+# 定义字符串
+name = "itheima is a brand of itcast"
+# 定义一个变量，用来统计有多少个a
+count = 0
+# for 循环遍历所有字母
+# for 临时变量 in 被统计的数据:
+for x in name:
+    if x == "a":
+    # 通过if判断变量是否等于a，等于a时count+1
+        count += 1
+print(f"被统计的字符串中有{count}个a")
+
+for num in range(10,20):  # 迭代10到20之间的数字
+   for i in range(2,num): # 根据因子迭代
+      if num%i == 0:      # 确定第一个因子
+         j=num/i          # 计算第二个因子
+         print ('%d 等于 %d * %d' % (num,i,j))
+         break            # 跳出当前循环
+   else:                  # 循环的 else 部分
+      print ('%d 是一个质数' % num)
+
+      students = ["a", "b", "c"]
+      for student in students:
+          print(student)
+
