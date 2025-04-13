@@ -101,3 +101,57 @@ for num in range(10,20):  # 迭代10到20之间的数字
       for student in students:
           print(student)
 
+
+while 4 < 5:
+    s = int(input("请输入分数:"))
+    if 80 >= s >= 60:
+        print("及格")
+    elif 80 < s <= 90:
+        print("优秀")
+    elif 90 < s <= 100:
+        print("非常优秀")
+    else:
+        print("不及格")
+        if s > 50:
+            print("你的分数在60分左右")
+        else:
+            print("你的分数低于50分")
+
+l = [1,2,3,4,5]
+for i in l:
+    print(i, end=" ")
+
+l = [1, 2, 3, 4, 5]
+l[2], l[3] = l[3], l[2]
+print(l)
+
+l = [1, 2, 3, 4, 5]
+l.remove(4)
+print(l)
+
+l = [1, 2, 3, 4, 5]
+l[2]=6
+print(l)
+
+l = [1, 2, 3, 4, 5]
+print(l[0:4])
+
+l = [1, 2, 3, 4, 5]
+n = l[-1:-3:-1]
+print(n)
+
+l = [6, 5, 4, 3, 2, 1]
+for i in range(1, len(l)):
+    for j in range(len(l) - i):
+        if l[j] > l[j + 1]:
+            l[j], l[j + 1] = l[j + 1], l[j]
+
+print(l)
+
+l = [6, 5, 4, 3, 2, 1]
+for i in range(0, len(l) - 1):
+    for j in range(i + 1, len(l)):
+        if l[i] > l[j]:
+            l[i], l[j] = l[j], l[i]
+
+print(l)
