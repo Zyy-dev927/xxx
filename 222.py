@@ -155,3 +155,58 @@ for i in range(0, len(l) - 1):
             l[i], l[j] = l[j], l[i]
 
 print(l)
+
+scores = {'数学': 95, '语文': 89, '英语': 90}
+print(scores.keys())
+print(scores.values())
+print(scores.items())
+
+a = {'one': 1, 'two': 2, 'three': [1,2,3]}
+b = a.copy()
+print(b)
+
+a = {'one': 1, 'two': 2, 'three': [1,2,3]}
+b = a.copy()
+#向 a 中添加新键值对，由于b已经提前将 a 所有键值对都深拷贝过来，因此 a 添加新键值对，不会影响 b。
+a['four']=100
+print(a)
+print(b)
+#由于 b 和 a 共享[1,2,3]（浅拷贝），因此移除 a 中列表中的元素，也会影响 b。
+a['three'].remove(1)
+print(a)
+print(b)
+
+a = {'one': 1, 'two': 2, 'three': 3}
+a.update({'one':4.5, 'four': 9.3})
+print(a)
+
+a = {'数学': 95, '语文': 89, '英语': 90, '化学': 83, '生物': 98, '物理': 89}
+print(a)
+a.pop('化学')
+print(a)
+a.popitem()
+print(a)
+
+a = {'数学': 95, '语文': 89, '英语': 90}
+print(a)#key不存在，指定默认值
+a.setdefault('物理', 94)
+print(a)#key不存在，不指定默认值
+a.setdefault('化学')
+print(a)#key存在，指定默认值
+a.setdefault('数学', 100)
+print(a)
+
+import copy
+
+a = [1, 2, 3, 4, ['a', 'b']]
+b = a  # 赋值
+c = copy.copy(a)  # 浅拷贝
+d = copy.deepcopy(a)  # 深拷贝
+
+a.append(5)  # 修改对象a,列表末尾添加数字5
+a[4].append('c')  # 修改对象a中的列表['a', 'b']
+
+print(a)
+print(b)
+print(c)
+print(d)
